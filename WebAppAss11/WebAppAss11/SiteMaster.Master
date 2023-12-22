@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.master.cs" Inherits="WebAppAss11.SiteMaster" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 99%;
+            height: 44px;
+        }
+        .auto-style2 {
+            width: 1040px;
+            height: 63px;
+            margin-top: 328px;
+        }
+        .auto-style3 {
+            position: absolute;
+            left: 1%;
+            top: 22%;
+            width: 98%;
+            height: 59%;
+            background-color: white;
+            color: darkmagenta;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+       <div> <header>            
+            <h1>Welcome to My Website</h1>
+            </header> 
+                <table class="auto-style1">
+                <tr>
+                    <td>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/About.aspx">About</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Article.aspx">Article</asp:HyperLink>
+                    </td>
+                </tr>
+                </table>      
+          </div>
+        <div class="auto-style3">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        <div>
+        <footer>
+            <h1 class="auto-style2">&copy; 2023 My Website. All rights reserved.</h1>            
+        </footer>
+            </div>
+    </form>
+</body>
+</html>
